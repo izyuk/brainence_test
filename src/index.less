@@ -1,0 +1,172 @@
+@white: #fff;
+@black: #000;
+@trans: transparent;
+@light_blue: #2EA3E4;
+@blue: #0075B6;
+@blue_h: #0063A4;
+@light_gray: #eee;
+@gray: #ccc;
+@dark_gray: #898681;
+@dark_dark_gray: #3C3D3E;
+@red: #ff0000;
+@yellow: #FFEA15;
+@yellow_h: #FFCA15;
+@green: #00B95B;
+@green_h: #00A95B;
+@red_h: #f50505;
+@message_to_me: #eee;
+@my_message: #d4fffd;
+@img_src: './static/images';
+.fontface(@fontname) {
+  @fonturl: './static/fonts';
+  font-family: @fontname;
+  font-weight: normal;
+  font-style: normal;
+  src: ~"url('@{fonturl}/@{fontname}.eot')";
+  src: ~"url('@{fonturl}/@{fontname}.woff')" format('woff'),
+  ~"url('@{fonturl}/@{fontname}.ttf')" format('truetype'),
+  ~"url('@{fonturl}/@{fontname}.svg')" format('svg');
+}
+
+@p_l: 'proximanovacond-light-webfont';
+@p_r: 'proximanovacond-regular-webfont';
+@font-face {
+  .fontface(@p_r);
+}
+
+@font-face {
+  .fontface(@p_r);
+}
+.font(@font,
+@sizeValue) {
+  font-family: @font, sans-serif;
+  @remValue: (@sizeValue / 16);
+  @pxValue: @sizeValue;
+  font-size: ~"@{pxValue}px";
+  font-size: ~"@{remValue}rem";
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+button,
+fieldset,
+form,
+input,
+label,
+legend,
+textarea,
+select,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+a,
+b,
+i,
+u,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  //    font-size: 100%;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  line-height: inherit;
+  vertical-align: baseline;
+  background: none;
+  white-space: normal;
+  transition: all .3s ease-in-out;
+}
+
+form {
+  height: inherit;
+}
+
+iframe {
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  .font(@p_r,
+          16);
+  margin: 0;
+  padding: 0;
+}
+
+A:link,
+A:active,
+A:hover,
+A:visited {
+  color: @black;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
